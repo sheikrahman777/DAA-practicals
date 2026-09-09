@@ -1,0 +1,5 @@
+This code uses Dynamic Programming to solve the 0/1 Knapsack problem.
+It creates a DP table to store the maximum profit for different capacities and items.
+For each item, it checks whether including or excluding it gives more profit.
+The table is filled by considering the weight and value of each item.
+Finally, it prints the maximum profit that can be obtained within the given capacity.

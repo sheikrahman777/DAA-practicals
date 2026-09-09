@@ -1,0 +1,1 @@
+This practical implements the Coin Change algorithm using Dynamic Programming. It finds the minimum number of coins required to make a given target amount using available coin denominations. The program takes user input and calculates the minimum number of coins needed.

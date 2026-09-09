@@ -1,0 +1,1 @@
+This practical implements factorial using both iterative and recursive methods. The iterative method uses a loop, while the recursive method repeatedly calls itself until the base condition is reached. It demonstrates two different approaches for calculating factorial.

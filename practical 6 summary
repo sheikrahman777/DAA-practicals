@@ -1,0 +1,5 @@
+This code uses Dynamic Programming to find the minimum cost of multiplying a chain of matrices.
+It creates a DP table to store the minimum multiplication cost for different matrix chains.
+It checks all possible ways to split the matrix chain and calculates their costs.
+The minimum cost for each sub-chain is stored in the DP table.
+Finally, it prints the minimum number of scalar multiplications required.
