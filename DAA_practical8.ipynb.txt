@@ -1,0 +1,153 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyO39JAsAAuIN7LqCmh/829y",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/baluvallepu/DAA-Practical-1/blob/main/DAA_practical8.ipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Graph and Searching(DFS and BFS)"
+      ],
+      "metadata": {
+        "id": "hy_8WmU6A7U-"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-93nqQeh9vSt",
+        "outputId": "6fee79ff-f6b0-4fa0-bdd7-a3844e2d253e"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Graph:\n",
+            "0 -> [1, 2]\n",
+            "1 -> [0, 2, 3]\n",
+            "2 -> [0, 1, 4]\n",
+            "3 -> [1, 4]\n",
+            "4 -> [2, 3]\n",
+            "BFS Traversal: 0 1 2 3 4 \n",
+            "DFS Traversal: 0 1 2 4 3 \n"
+          ]
+        }
+      ],
+      "source": [
+        "from collections import deque\n",
+        "\n",
+        "# Graph implementation using an adjacency list\n",
+        "class Graph:\n",
+        "    def __init__(self):\n",
+        "        self.graph = {}\n",
+        "\n",
+        "    # Add a vertex\n",
+        "    def add_vertex(self, vertex):\n",
+        "        if vertex not in self.graph:\n",
+        "            self.graph[vertex] = []\n",
+        "\n",
+        "    # Add an edge\n",
+        "    def add_edge(self, vertex1, vertex2):\n",
+        "        self.add_vertex(vertex1)\n",
+        "        self.add_vertex(vertex2)\n",
+        "\n",
+        "        # Undirected graph\n",
+        "        self.graph[vertex1].append(vertex2)\n",
+        "        self.graph[vertex2].append(vertex1)\n",
+        "\n",
+        "    # Display the graph\n",
+        "    def display(self):\n",
+        "        print(\"Graph:\")\n",
+        "        for vertex in self.graph:\n",
+        "            print(vertex, \"->\", self.graph[vertex])\n",
+        "\n",
+        "    # Breadth First Search (BFS)\n",
+        "    def bfs(self, start):\n",
+        "        visited = set()\n",
+        "        queue = deque()\n",
+        "\n",
+        "        visited.add(start)\n",
+        "        queue.append(start)\n",
+        "\n",
+        "        print(\"BFS Traversal:\", end=\" \")\n",
+        "\n",
+        "        while queue:\n",
+        "            vertex = queue.popleft()\n",
+        "            print(vertex, end=\" \")\n",
+        "\n",
+        "            for neighbor in self.graph[vertex]:\n",
+        "                if neighbor not in visited:\n",
+        "                    visited.add(neighbor)\n",
+        "                    queue.append(neighbor)\n",
+        "\n",
+        "        print()\n",
+        "\n",
+        "    # Depth First Search (DFS)\n",
+        "    def dfs(self, start):\n",
+        "        visited = set()\n",
+        "\n",
+        "        print(\"DFS Traversal:\", end=\" \")\n",
+        "\n",
+        "        def dfs_recursive(vertex):\n",
+        "            visited.add(vertex)\n",
+        "            print(vertex, end=\" \")\n",
+        "\n",
+        "            for neighbor in self.graph[vertex]:\n",
+        "                if neighbor not in visited:\n",
+        "                    dfs_recursive(neighbor)\n",
+        "\n",
+        "        dfs_recursive(start)\n",
+        "        print()\n",
+        "\n",
+        "\n",
+        "# Create graph\n",
+        "g = Graph()\n",
+        "\n",
+        "# Add edges\n",
+        "g.add_edge(0, 1)\n",
+        "g.add_edge(0, 2)\n",
+        "g.add_edge(1, 2)\n",
+        "g.add_edge(1, 3)\n",
+        "g.add_edge(2, 4)\n",
+        "g.add_edge(3, 4)\n",
+        "\n",
+        "# Display graph\n",
+        "g.display()\n",
+        "\n",
+        "# BFS starting from vertex 0\n",
+        "g.bfs(0)\n",
+        "\n",
+        "# DFS starting from vertex 0\n",
+        "g.dfs(0)"
+      ]
+    }
+  ]
+}
