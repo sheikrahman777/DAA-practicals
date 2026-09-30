@@ -1,1 +1,32 @@
-Conclusion : Sorting algorithms are used to arrange data in ascending or descending order, making searching and data processing more efficient. Bubble Sort, Selection Sort, and Insertion Sort are simple and suitable for small datasets, while Merge Sort and Quick Sort are more efficient for large datasets. Each algorithm has its own advantages, limitations, and time complexity. The choice of the best sorting algorithm depends on the size of the data, available memory, and application requirements
+DAA.PRATICAL_1 Summary:- This practical implements and compares five fundamental sorting algorithms: Bubble Sort, Selection Sort, Insertion Sort, Merge Sort, and Quick Sort. Each algorithm sorts the input array, measures the execution time, and demonstrates its working along with its time complexity. The program helps in understanding the efficiency, performance, and practical applications of different sorting techniques.
+
+Conclusion:- The experiment shows that different sorting algorithms have different performance characteristics. Bubble Sort, Selection Sort, and Insertion Sort are simple to implement but are less efficient for large datasets due to their O(n²) time complexity. Merge Sort and Quick Sort are more efficient, with an average time complexity of O(n log n), making them suitable for larger inputs. The choice of a sorting algorithm depends on factors such as input size, data characteristics, memory requirements, and application needs.
+
+DAA.PRATICAL_2 Summary:- This program demonstrates the implementation of Linear Search and Binary Search algorithms in Python. It accepts user input, searches for a given element, measures the execution time, and displays the result along with the time complexity. Linear Search checks each element one by one, whereas Binary Search works on a sorted array by repeatedly dividing the search space into two halves, making it more efficient.
+
+Conclusion:- The experiment shows that Binary Search is significantly faster than Linear Search for large sorted datasets, with a time complexity of O(log n) compared to O(n) for Linear Search. However, Binary Search requires the array to be sorted, while Linear Search can be applied to both sorted and unsorted data. Therefore, the choice of algorithm depends on the nature of the input data and the application's requirements.
+
+DAA.PRATICAL_3 Summary:- This program implements the Heap Sort algorithm in Python. It builds a Max Heap from the input array and repeatedly extracts the largest element to produce the sorted array in ascending order. The program also measures the execution time in microseconds and displays the best, average, and worst-case time complexities.
+
+Conclusion:- The experiment demonstrates that Heap Sort is an efficient comparison-based sorting algorithm with a consistent time complexity of O(n log n) in the best, average, and worst cases. It provides reliable performance regardless of the input order and is suitable for sorting large datasets. Although it is not a stable sorting algorithm, Heap Sort is preferred when guaranteed O(n log n) performance and constant auxiliary space (O(1)) are required.
+
+DAA.PRATICAL_4 summary:- The factorial program was implemented using both iterative and recursive methods. The iterative method uses a loop, while the recursive method calls itself until it reaches the base condition. The execution time, time complexity, and space complexity of both methods were compared.
+
+Conclusion:- both methods take O(n) time. The recursive method uses O(n) space because it stores function calls. The iterative method uses O(1) space, so it uses less memory. Therefore, the iterative method is more memory-efficient, while the recursive method is simpler to understand.
+
+DAA.PRATICAL_7 Summary:- The Making Change Problem was solved using Dynamic Programming. The program finds the minimum number of coins needed to make a given amount.
+
+Conclusion:- Dynamic Programming helps solve the problem efficiently by storing previous results. The program has O(n × amount) time complexity and O(amount) space complexity. About
+
+DAA.PRACTICAL_5 Summary:- This program solves the 0/1 Knapsack Problem using Dynamic Programming. It finds the maximum value of items that can fit within the given capacity.
+
+Conclusion:- Dynamic Programming avoids repeated calculations and helps find the maximum possible value efficiently.
+
+DAA.PRACTICAL_6 Summary:- This program finds the best way to multiply matrices with the minimum number of operations using Dynamic Programming.
+
+Conclusion:- Dynamic Programming helps reduce repeated calculations and gives the minimum multiplication cost efficiently. 
+
+PRACTICAL -8
+Summary Graphs are useful data structures for representing relationships between objects using vertices (nodes) and edges. Two fundamental graph-searching techniques are Depth-First Search (DFS) and Breadth-First Search (BFS). DFS explores a graph by going as deep as possible along one path before backtracking, while BFS explores all neighboring vertices level by level. Both algorithms can be implemented using adjacency matrices or adjacency lists. DFS generally uses a stack or recursion, whereas BFS uses a queue. These techniques are widely used in path finding, network traversal, connectivity checking, and many other computer science applications.
+
+Conclusion The implementation of graphs with DFS and BFS provides a strong foundation for understanding graph traversal. DFS is useful when deep exploration and backtracking are required, while BFS is particularly useful for level-wise traversal and finding the shortest path in an unweighted graph. Understanding both algorithms helps in solving various real-world and computational problems efficiently and forms an important part of data structures and algorithms.
